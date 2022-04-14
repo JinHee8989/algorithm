@@ -16,6 +16,7 @@ public class Algorithm001 {
 
 
 
+        //1. stack을 이용해서 만들고자 하는 수열 입력
         System.out.println("정수 (1~100,000) 중 하나를 입력하세요");
         int row = sc.nextInt();
 
@@ -38,9 +39,9 @@ public class Algorithm001 {
 
 
 
+        // 2. 1부터 n까지 stack에 쌓으면서 수열 만들기 (stack에 push할 경우 "+", 수열을 만들기위해 pop할 경우 "-")
         int i = 0;
         do{
-
 
             i++;
             stack.push(i);
@@ -61,6 +62,7 @@ public class Algorithm001 {
         }while(i!=row);
 
 
+        //3. stack에 의해 수열을 만들지 못할 경우 'NO'출력
         if(list.size() != 0){
             System.out.println("NO");
         }else{
